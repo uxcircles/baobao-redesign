@@ -731,6 +731,9 @@ a.award:hover { border-color: var(--line-strong); }
   letter-spacing: .04em;
 }
 .site-footer a:hover { color: var(--cream); }
+.concept-note { flex-basis: 100%; color: var(--muted); }
+.concept-note a { color: var(--cream); text-decoration: underline; text-underline-offset: 3px; }
+.site-footer--home { padding-top: 14px; }
 
 /* ==========================================================================
    Reveal on load
