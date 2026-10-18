@@ -304,6 +304,39 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .overlay-nav .photo { min-height: 0; }
 
+/* Open/close choreography: links rise in one by one, photo wipes up, close button spins in.
+   Closing drops the delays so everything leaves together with the backdrop fade. */
+.overlay-nav__links li,
+.overlay-nav__info {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .3s, transform .3s var(--ease);
+}
+.overlay-nav.is-open .overlay-nav__links li,
+.overlay-nav.is-open .overlay-nav__info {
+  opacity: 1;
+  transform: none;
+  transition: opacity .6s var(--ease), transform .8s var(--ease);
+}
+.overlay-nav.is-open .overlay-nav__links li:nth-child(1) { transition-delay: .12s; }
+.overlay-nav.is-open .overlay-nav__links li:nth-child(2) { transition-delay: .18s; }
+.overlay-nav.is-open .overlay-nav__links li:nth-child(3) { transition-delay: .24s; }
+.overlay-nav.is-open .overlay-nav__links li:nth-child(4) { transition-delay: .30s; }
+.overlay-nav.is-open .overlay-nav__links li:nth-child(5) { transition-delay: .36s; }
+.overlay-nav.is-open .overlay-nav__info { transition-delay: .46s; }
+.overlay-nav > .photo {
+  clip-path: inset(100% 0 0 0 round var(--radius));
+  transition: clip-path .4s var(--ease);
+}
+.overlay-nav.is-open > .photo {
+  clip-path: inset(0 0 0 0 round var(--radius));
+  transition: clip-path 1s .08s var(--ease);
+}
+.overlay-nav > .photo img { transform: scale(1.15); transition: transform .4s var(--ease); }
+.overlay-nav.is-open > .photo img { transform: scale(1); transition: transform 1.4s .08s var(--ease); }
+.overlay-nav__close { transform: rotate(-90deg); transition: transform .5s var(--ease), background .25s, color .25s, border-color .25s; }
+.overlay-nav.is-open .overlay-nav__close { transform: none; }
+
 /* ==========================================================================
    Home
    ========================================================================== */
