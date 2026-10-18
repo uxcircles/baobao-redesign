@@ -770,15 +770,12 @@ a.award:hover { border-color: var(--line-strong); }
   .site-header { top: calc(var(--gap) + 8px); left: calc(var(--gap) + 8px); right: calc(var(--gap) + 8px); }
   .nav-link:not(.nav-link--cta) { display: none; }
   .site-header .socials { display: none; }
-  /* first screen = hero + a row of three small cards, like desktop */
+  /* first screen = hero + three stacked link cards */
   .home { grid-template-rows: minmax(0, 1fr) auto; height: calc(100svh - var(--gap) * 2); min-height: 460px; }
   .hero .photo__title { top: auto; bottom: 22px; transform: none; }
-  .home-cards .photo { height: 132px; }
-  /* keep the notch tab, just the label (no arrow) so it fits a third-width card */
-  .home-cards .notch { padding: 7px 10px 2px 12px; }
-  .home-cards .notch .icon-btn { display: none; }
-  .home-cards .card-link__label { font-size: .66rem; line-height: 1.25; letter-spacing: .02em; }
-  .home-cards .card-link__extra { display: none; }
+  .home-cards { grid-template-columns: 1fr; }
+  .home-cards .photo { height: 84px; }
+  .home-cards .card-link__label { font-size: .74rem; }
   .hero .notch { display: none; }
   .about-grid, .contact-side { grid-template-columns: 1fr; grid-template-rows: none; }
   .awards { grid-template-columns: 1fr; }
