@@ -38,7 +38,7 @@ window.BAOBAO_MENU = [
     id: "xiaochi",
     title: "Xiaochi",
     bg: "assets/img/xiaochi-dark.jpg",
-    plate: "assets/img/dishes/dumplings.jpg",
+    plate: "assets/img/dishes/dumplings.jpg?v=2",
     items: [
       { name: "Three-Cup Chicken", zh: "三杯雞", price: 14, img: "assets/img/dishes/three-cup-chicken.jpg",
         desc: "A classic Taiwanese dish, featuring tender chicken cooked in a savoury blend of soy sauce, sesame oil, and rice wine, with fresh basil for an aromatic finish." },
@@ -48,7 +48,7 @@ window.BAOBAO_MENU = [
         desc: "Crispy fried tofu, seasoned with a savoury mix of salt, pepper, and aromatic spices, offering a perfect balance of crunch and flavour in every bite." },
       { name: "Agedashi Tofu", zh: "揚出豆腐", price: 10, veg: true, img: "assets/img/dishes/agedashi-tofu.jpg",
         desc: "Crispy tofu in savoury dashi broth, topped with bonito flakes and spring onions for a delicious umami flavour." },
-      { name: "Chive and Chicken Dumplings", zh: "韭菜餃", price: 10, img: "assets/img/dishes/dumplings.jpg",
+      { name: "Chive and Chicken Dumplings", zh: "韭菜餃", price: 10, img: "assets/img/dishes/dumplings.jpg?v=2",
         desc: "Tender chicken and aromatic chives wrapped in a soft dumpling skin, served with XO sauce or Sichuan chilli oil." },
       { name: "Hakka Salted Pork", zh: "客家鹹豬肉", price: 12, img: "assets/img/dishes/hakka.jpg",
         desc: "A famous Hakka market snack: pork belly cured with salt and spices, roasted and sliced, best enjoyed with rice." }
