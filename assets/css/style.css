@@ -776,6 +776,11 @@ a.award:hover { border-color: var(--line-strong); }
   .home-cards { grid-template-columns: 1fr; }
   .home-cards .photo { height: 96px; }
   .home-cards .card-link__label { font-size: .74rem; }
+  /* tone the three strips down to one quiet set so the hero stays the focus */
+  .home-cards .photo > img { filter: brightness(.62) saturate(.75); }
+  .home-cards .photo:nth-child(1) > img { object-position: 50% 62%; }
+  .home-cards .photo:nth-child(2) > img { object-position: 50% 55%; }
+  .home-cards .photo:nth-child(3) > img { object-position: 50% 45%; }
   .hero .notch { display: none; }
   .about-grid, .contact-side { grid-template-columns: 1fr; grid-template-rows: none; }
   .awards { grid-template-columns: 1fr; }
