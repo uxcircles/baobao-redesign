@@ -662,8 +662,8 @@ a.award:hover { border-color: var(--line-strong); }
   white-space: nowrap;
   text-shadow: 0 6px 30px rgba(0,0,0,.6);
 }
-.cat__card .notch .icon-btn { transition: transform .5s var(--ease), background .25s, color .25s; }
-.cat.is-open .cat__card .notch .icon-btn { transform: rotate(45deg); background: var(--cream); color: var(--bg); }
+.cat__card .notch .icon-btn { transition: transform .8s var(--ease), background .25s, color .25s; }
+.cat.is-open .cat__card .notch .icon-btn { transform: rotate(225deg); background: var(--cream); color: var(--bg); }
 
 .cat__list {
   position: relative;
