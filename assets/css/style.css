@@ -781,6 +781,7 @@ a.award:hover { border-color: var(--line-strong); }
   .home-cards .notch { left: 10px; right: 10px; bottom: 10px; padding: 0; background: none; }
   .home-cards .notch::before, .home-cards .notch::after, .home-cards .notch .icon-btn { display: none; }
   .home-cards .card-link__label { font-size: .66rem; line-height: 1.25; letter-spacing: .02em; }
+  .home-cards .card-link__extra { display: none; }
   .hero .notch { display: none; }
   .about-grid, .contact-side { grid-template-columns: 1fr; grid-template-rows: none; }
   .awards { grid-template-columns: 1fr; }
