@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a table — BAOBAO</title>
+  <meta name="description" content="Reserve a table at BaoBao, Boxpark Croydon.">
+  <meta name="theme-color" content="#0a0a09">
+  <link rel="icon" href="assets/img/logo-mark.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
+</head>
+<body>
+  <div class="page" style="position:relative">
+  <header class="site-header">
+    <nav class="nav-pill" aria-label="Main">
+      <button class="icon-btn" type="button" data-nav-open aria-expanded="false" aria-controls="overlay-nav" aria-label="Open menu"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 5h10M3 8h10M3 11h10"/></svg></button>
+      <a class="logo" href="index.html">BAOBAO</a>
+      <a class="nav-link" href="menu.html">Menu</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link nav-link--cta" href="reservation.html" aria-current="page">Book a table</a>
+    </nav>
+    
+  </header>
+  <main class="split">
+    <section class="photo photo--shade reveal">
+      <img src="assets/img/reservation.jpg" alt="Friends sharing Taiwanese dishes at BaoBao">
+      <h1 class="display display--lg photo__title">Book<br>a table</h1>
+    </section>
+    <section class="panel reserve-panel reveal reveal--1">
+      <div class="reserve-form">
+        <form novalidate>
+          <h2 class="rule-title">Reservation</h2>
+          <p class="reserve-form__intro">Reserve your table at BaoBao and enjoy exceptional Taiwanese cuisine paired with an unforgettable dining experience.</p>
+          <div class="field">
+            <input id="name" name="name" type="text" placeholder=" " autocomplete="name">
+            <label for="name">Name</label>
+            <p class="field__error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <input id="phone" name="phone" type="tel" placeholder=" " autocomplete="tel">
+            <label for="phone">Phone number</label>
+            <p class="field__error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <input id="email" name="email" type="email" placeholder=" " autocomplete="email">
+            <label for="email">Email</label>
+            <p class="field__error" aria-live="polite"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <select id="guests" name="guests" required><option value="" disabled selected></option><option value="1 guest">1</option><option value="2 guests">2</option><option value="3 guests">3</option><option value="4 guests">4</option><option value="5 guests">5</option><option value="6 guests">6</option><option value="7 guests">7</option><option value="8 guests">8</option></select>
+              <label for="guests">Guests</label>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+            <input id="date" name="date" type="date" placeholder=" " required>
+            <label for="date">Date</label>
+            <p class="field__error" aria-live="polite"></p>
+          </div>
+            <div class="field">
+              <select id="time" name="time" required></select>
+              <label for="time">Time</label>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+          </div>
+          <button class="btn" type="submit">Reserve</button>
+          <p class="reserve-form__note">For groups larger than 8, please call us on <a href="tel:+442038732750">020 3873 2750</a>.</p>
+        </form>
+        <div class="reserve-success" role="status">
+          <h2 class="rule-title" tabindex="-1">Thank you</h2>
+          <p data-summary></p>
+          <button class="btn" type="button" data-reserve-again>Make another booking</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <span>© BAOBAO · Taiwanese street food, Boxpark Croydon</span>
+    <span><a href="tel:+442038732750">020 3873 2750</a> · <a href="mailto:info@baobaolondon.co.uk">info@baobaolondon.co.uk</a></span>
+  </footer>
+  </div>
+  <div class="overlay-nav" id="overlay-nav" aria-hidden="true">
+    <div style="position:relative">
+      <button class="icon-btn icon-btn--solid overlay-nav__close" type="button" data-nav-close aria-label="Close menu"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+      <ul class="overlay-nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reservation.html" aria-current="page">Book a table</a></li>
+      </ul>
+      <div class="overlay-nav__info">Boxpark Croydon · Unit 44–45, 99 George St, CR0 1LD<br>020 3873 2750 · Open daily from 12:00</div>
+    </div>
+    <div class="photo"><img src="assets/img/interior.jpg" alt="" loading="lazy"></div>
+  </div>
+  <script src="assets/js/main.js?v=3"></script>
+</body>
+</html>
