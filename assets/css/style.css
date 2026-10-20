@@ -284,6 +284,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .concept-bar a strong { font-weight: 500; letter-spacing: .06em; }
 .concept-bar a svg { width: .9em; height: .9em; }
 .concept-bar a:hover { color: #fff; }
+.concept-long a { display: inline; color: inherit; letter-spacing: 0; text-decoration: underline; text-underline-offset: 3px; }
 
 /* Full-screen menu */
 .overlay-nav {
