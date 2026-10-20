@@ -276,7 +276,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .concept-tag {
   flex-shrink: 0;
   font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--cream); background: #c8191e;
+  color: var(--cream); background: rgba(239, 230, 212, .12);
+  border: 1px solid var(--line-strong);
   padding: 3px 7px 2px; border-radius: 4px;
 }
 .concept-short { display: none; }
