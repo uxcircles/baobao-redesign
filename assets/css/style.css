@@ -19,6 +19,7 @@
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --gap: 14px;
+  --bar-h: 34px;
   --radius: 18px;
   --radius-sm: 12px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -52,8 +53,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .page {
   padding: var(--gap);
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: calc(100vh - var(--bar-h));
+  min-height: calc(100dvh - var(--bar-h));
 }
 
 /* ---------- Type ---------- */
@@ -258,6 +259,32 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .socials { display: flex; gap: 8px; }
 
+/* Concept / credit stripe */
+.concept-bar {
+  height: var(--bar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 calc(var(--gap) + 10px);
+  background: #000;
+  color: var(--muted);
+  font-size: 12.5px;
+  border-bottom: 1px solid var(--line);
+}
+.concept-bar p { display: flex; align-items: center; gap: 10px; margin: 0; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.concept-tag {
+  flex-shrink: 0;
+  font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--cream); background: #c8191e;
+  padding: 3px 7px 2px; border-radius: 4px;
+}
+.concept-short { display: none; }
+.concept-bar a { flex-shrink: 0; display: inline-flex; align-items: center; gap: 4px; color: var(--cream); letter-spacing: .02em; }
+.concept-bar a strong { font-weight: 500; letter-spacing: .06em; }
+.concept-bar a svg { width: .9em; height: .9em; }
+.concept-bar a:hover { color: #fff; }
+
 /* Full-screen menu */
 .overlay-nav {
   position: fixed;
@@ -345,7 +372,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: grid;
   grid-template-rows: minmax(420px, 1fr) clamp(160px, 23vh, 230px);
   gap: var(--gap);
-  height: calc(100dvh - var(--gap) * 2);
+  height: calc(100dvh - var(--bar-h) - var(--gap) * 2);
   min-height: 640px;
 }
 
@@ -385,7 +412,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
-  min-height: calc(100dvh - var(--gap) * 2);
+  min-height: calc(100dvh - var(--bar-h) - var(--gap) * 2);
 }
 .split > .photo { min-height: 520px; }
 
@@ -593,7 +620,7 @@ a.award:hover { border-color: var(--line-strong); }
   display: flex;
   flex-direction: column;
   gap: var(--gap);
-  height: calc(100dvh - var(--gap) * 2);
+  height: calc(100dvh - var(--bar-h) - var(--gap) * 2);
   min-height: 680px;
   padding-top: calc(var(--gap) + 50px); /* clear the floating header */
 }
@@ -769,12 +796,14 @@ a.award:hover { border-color: var(--line-strong); }
 }
 
 @media (max-width: 760px) {
+  .concept-long { display: none; }
+  .concept-short { display: inline; }
   :root { --gap: 10px; --radius: 16px; }
   .site-header { top: calc(var(--gap) + 8px); left: calc(var(--gap) + 8px); right: calc(var(--gap) + 8px); }
   .nav-link:not(.nav-link--cta) { display: none; }
   .site-header .socials { display: none; }
   /* first screen = hero + three stacked link cards */
-  .home { grid-template-rows: minmax(0, 1fr) auto; height: calc(100svh - var(--gap) * 2); min-height: 460px; }
+  .home { grid-template-rows: minmax(0, 1fr) auto; height: calc(100svh - var(--bar-h) - var(--gap) * 2); min-height: 460px; }
   .hero .photo__title { top: auto; bottom: 22px; transform: none; }
   .home-cards { grid-template-columns: 1fr; }
   .home-cards .photo { height: 96px; }
@@ -799,4 +828,8 @@ a.award:hover { border-color: var(--line-strong); }
   .cat { gap: 0; }
   .cat.is-open { gap: var(--gap); }
   .dish__img { width: 52px; height: 52px; }
+}
+
+@media (max-width: 400px) {
+  .concept-short { display: none; }
 }
