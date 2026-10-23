@@ -28,3 +28,15 @@ assets/img/              photos
 - Photos belong to BaoBao (from baobaolondon.co.uk and their Instagram).
 - Fonts: Libre Caslon Text and Inter, both under the SIL Open Font License.
 - Map © OpenStreetMap contributors.
+
+## Internal notes
+
+The review of the current site, the items to confirm with the client and the pitch material are kept locally in `.private/` (git-ignored, never committed).
+
+After cloning, enable the git hooks:
+
+```
+git config core.hooksPath .githooks
+```
+
+Commits and pushes are then blocked if they include `.private/` or a phrase from `.private/blocklist.txt`, and the open to-dos in `.private/NOTES.md` are printed. To see them any time: `sh .githooks/remind.sh`
